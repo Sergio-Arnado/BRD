@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Trabajador</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NOMBRE DE LA ORGANIZACIÓN</h1>
+            <button onclick="window.location.href='ingreso.html'" class="add-worker">Agregar Trabajador</button>
+        </header>
+        <label for="rut">Ingrese Rut de Trabajador</label>
+        <div class="search-container">
+            <input type="text" id="rut" placeholder="Ejemplo: 6.345.123-1">
+            <button id="search-button" class="search-button">🔍</button>
+            <button onclick="window.location.href='buscar_sede_usuario.html'" class="user-button">Buscar Sede</button>
+        </div>
+        <div id="result-container" class="result-container">
+            <!-- Aquí se mostrarán los resultados -->
+        </div>
+        <footer>
+            <p>Desarrollado por Sergio Amado - Versión 1.0</p>
+        </footer>        
+    </div>
+    <script src="script.js"></script>
+    <script src="scriptsbusqueda.js"></script>
+</body>
+</html>

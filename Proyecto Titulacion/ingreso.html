@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Trabajador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container ingreso-container">
+        <h1>INGRESO DE TRABAJADOR</h1>
+        <form action="insertar_trabajador.php" method="POST" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <th>Nombre Completo</th>
+                    <th>RUT</th>
+                    <th>Cargo</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="nombre_completo" placeholder="Nombre Completo" required></td>
+                    <td><input type="text" name="rut" placeholder="RUT" required></td>
+                    <td><input type="text" name="cargo" placeholder="Cargo" required></td>
+                </tr>
+                <tr>
+                    <th>Sueldo</th>
+                    <th>Tipo Contrato</th>
+                    <th>Horario</th>
+                </tr>
+                <tr>
+                    <td><input type="number" name="sueldo" placeholder="Sueldo" required></td>
+                    <td>
+                        <select name="tipo_contrato" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Indefinido">Indefinido</option>
+                            <option value="Temporal">Temporal</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="horario" placeholder="Horario" required></td>
+                </tr>
+                <tr>
+                    <th>Sede</th>
+                    <th>Status</th>
+                    <th>Fecha Registro</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="sede" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Aliwe">Aliwe</option>
+                            <option value="Ayen">Ayen</option>
+                            <option value="Duwen">Duwen</option>
+                            <option value="Inara">Inara</option>
+                            <option value="Kalan">Kalan</option>
+                            <option value="Lafquen">Lafquen</option>
+                            <option value="Maihue">Maihue</option>
+                            <option value="Tahiel">Tahiel</option>
+                            <option value="Trekan">Trekan</option>
+                            <option value="Varua">Varua</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="status" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Vigente">Vigente</option>
+                            <option value="No Vigente">No Vigente</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="fecha_registro" required></td>
+                </tr>
+                <tr>
+                    <th colspan="3">Registrado por</th>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="email" name="registrado_por" placeholder="Correo del registrador" required>
+                    </td>
+                </tr>
+            </table>
+            <div class="buttons-container">
+                <label for="documento" class="file-label">Adjuntar Documento</label>
+                <input type="file" id="documento" name="documento" accept=".pdf" required>
+                <button type="submit">Agregar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

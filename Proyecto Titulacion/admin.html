@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #FFFF66;"> <!-- Fondo amarillo -->
+    <div class="container-admin">
+        <h1>PANEL DEL ADMINISTRADOR</h1>
+        <div class="button-container">
+            <button onclick="window.location.href='ingresoadmin.html'" class="admin-button">Agregar Trabajador</button>
+            <button onclick="window.location.href='historialregistroadmin.php'" class="admin-button">Historial de Registro</button>
+            <button onclick="window.location.href='agregar_usuario.html'" class="admin-button">Agregar Usuario</button>
+            <button onclick="window.location.href='historial_usuarios.php'" class="admin-button">Historial de Usuarios</button>
+            <button onclick="window.location.href='agregar_sede.html'" class="admin-button">Agregar Sede</button> <!-- Nuevo botón -->
+        </div>
+
+        <!-- Barra de búsqueda de trabajadores -->
+        <label for="rut">Ingrese Rut de Trabajador</label>
+        <div class="search-container">
+            <input type="text" id="rut" placeholder="Ejemplo: 6.345.123-1">
+            <button id="search-button" class="search-button">🔍</button>
+        </div>
+        <div id="result-container" class="result-container">
+            <!-- Aquí se mostrarán los resultados -->
+        </div>
+
+        <!-- Barra de búsqueda de sedes -->
+        <label for="buscar-nombre-sede">Ingrese Nombre de la Sede</label>
+        <div class="search-container">
+            <input type="text" id="buscar-nombre-sede" placeholder="Ejemplo: Aliwe">
+            <button onclick="window.location.href='buscar_sede.html'" class="search-button">🔍</button>
+        </div>
+        <div id="resultados-sede" class="result-container">
+            <!-- Aquí se mostrarán los resultados de sedes -->
+        </div>
+
+        <footer>
+            <p>Desarrollado por Sergio Amado - Versión 1.0</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <script src="scriptsbusqueda.js"></script> <!-- Nuevo script para buscar sedes -->
+</body>
+</html>

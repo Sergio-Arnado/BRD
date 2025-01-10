@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Trabajador (Administrador)</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function habilitarBotonAgregar() {
+            const archivo = document.getElementById('archivo');
+            const botonAgregar = document.getElementById('boton-agregar');
+            botonAgregar.disabled = !archivo.value; // Habilitar solo si hay un archivo seleccionado
+        }
+    </script>
+</head>
+<body style="background-color: #FFFF66;"> <!-- Fondo amarillo -->
+    <div class="container-admin ingreso-container">
+        <h1>INGRESO DE TRABAJADOR - ADMINISTRADOR</h1>
+        <form action="insertar_trabajador.php" method="POST" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <th>Nombre Completo</th>
+                    <th>RUT</th>
+                    <th>Cargo</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="nombre_completo" placeholder="Nombre Completo" required></td>
+                    <td><input type="text" name="rut" placeholder="RUT" required></td>
+                    <td><input type="text" name="cargo" placeholder="Cargo" required></td>
+                </tr>
+                <tr>
+                    <th>Sueldo</th>
+                    <th>Tipo Contrato</th>
+                    <th>Horario</th>
+                </tr>
+                <tr>
+                    <td><input type="number" step="0.01" name="sueldo" placeholder="Sueldo" required></td>
+                    <td>
+                        <select name="tipo_contrato" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Indefinido">Indefinido</option>
+                            <option value="Temporal">Temporal</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="horario" placeholder="Horario" required></td>
+                </tr>
+                <tr>
+                    <th>Sede</th>
+                    <th>Status</th>
+                    <th>Fecha Registro</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="sede" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Aliwe">Aliwe</option>
+                            <option value="Ayen">Ayen</option>
+                            <option value="Duwen">Duwen</option>
+                            <option value="Inara">Inara</option>
+                            <option value="Kalan">Kalan</option>
+                            <option value="Lafquen">Lafquen</option>
+                            <option value="Maihue">Maihue</option>
+                            <option value="Tahiel">Tahiel</option>
+                            <option value="Trekan">Trekan</option>
+                            <option value="Varua">Varua</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="status" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Vigente">Vigente</option>
+                            <option value="No Vigente">No Vigente</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="fecha_registro" required></td>
+                </tr>
+                <tr>
+                    <th>Registrado por</th>
+                    <th>Nombre del Documento</th>
+                    <th>Archivo</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="registrado_por" placeholder="Registrado por" required></td>
+                    <td><input type="text" name="nombre_documento" placeholder="Nombre del Documento" required></td>
+                    <td>
+                        <input type="file" id="archivo" name="documento" accept=".pdf" onchange="habilitarBotonAgregar()" required>
+                    </td>
+                </tr>
+            </table>
+            <div class="buttons-container">
+                <button type="button" onclick="document.getElementById('archivo').click()">Adjuntar Documento</button>
+                <button type="submit" id="boton-agregar" disabled>Agregar Trabajador</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,480 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #6FA3EF; /* Color azul de fondo */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #3A6FB0; /* Fondo de la caja principal */
+    padding: 100px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 80%;
+}
+
+label {
+    font-size: 1em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustes para ingreso.html */
+.ingreso-container {
+    width: 90%; /* Ajuste para pantallas pequeñas */
+    max-width: 1200px; /* Límite máximo para pantallas grandes */
+    margin: 0 auto; /* Centrar horizontalmente */
+    background-color: #3A6FB0; /* Fondo del contenedor */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.ingreso-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Tabla responsiva */
+.ingreso-container table {
+    width: 100%; /* Tabla se adapta al contenedor */
+    border-collapse: collapse;
+    margin: 20px 0;
+    table-layout: fixed; /* Asegura que las celdas tengan un ancho fijo */
+}
+
+.ingreso-container table th, 
+.ingreso-container table td {
+    padding: 15px 20px; /* Aumenta el espacio interno */
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    word-wrap: break-word; /* Ajusta textos largos */
+}
+
+.ingreso-container table th {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.ingreso-container input,
+.ingreso-container select {
+    width: 95%; /* Ajusta el ancho dentro de las celdas */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.ingreso-container input[type="file"] {
+    display: none; /* Ocultamos el input real */
+}
+
+/* Botón de adjuntar archivo */
+.file-label {
+    display: inline-block;
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.file-label:hover {
+    background-color: #e64a19;
+}
+
+/* Botones en ingreso.html */
+.ingreso-container .buttons-container {
+    margin-top: 20px;
+}
+
+.ingreso-container button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px;
+}
+
+.ingreso-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor de resultados */
+.result-container {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-container table {
+    width: 100%; /* La tabla ocupa todo el ancho del contenedor */
+    border-collapse: collapse;
+    table-layout: fixed; /* Asegura que las celdas tengan un ancho uniforme */
+}
+
+.result-container th, 
+.result-container td {
+    padding: 10px; /* Espacio interno más amplio */
+    text-align: left; /* Centra el texto */
+    border: 1px solid #ddd; /* Borde de las celdas */
+    font-size: 0.9em; /* Incrementa ligeramente el tamaño del texto */
+    word-wrap: break-word; /* Permite ajustar textos largos */
+}
+
+.result-container th {
+    background-color: #0056b3; /* Fondo azul para los encabezados */
+    color: white; /* Texto blanco */
+    font-weight: bold;
+}
+
+.result-container td {
+    color: black; /* Texto negro */
+}
+
+/* Ajustes específicos para pantallas más grandes */
+@media screen and (min-width: 1024px) {
+    .result-container th, 
+    .result-container td {
+        padding: 20px; /* Más espacio interno en pantallas grandes */
+        font-size: 1.1em; /* Aumenta aún más el texto en pantallas grandes */
+    }
+}/* Contenedor de resultados */
+.result-container {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Contenedor más amplio */
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    margin-left: auto; /* Centrar el contenedor horizontalmente */
+    margin-right: auto;
+}
+
+.result-container table {
+    width: 100%; /* La tabla ocupa todo el ancho del contenedor */
+    border-collapse: collapse;
+    table-layout: fixed; /* Distribuye el ancho de las celdas de forma uniforme */
+}
+
+.result-container th, 
+.result-container td {
+    padding: 15px; /* Espacio interno */
+    text-align: left; /* Centra el texto horizontalmente */
+    border: 1px solid #ddd; /* Borde de las celdas */
+    font-size: 1em; /* Tamaño de texto */
+    word-wrap: break-word; /* Ajusta textos largos */
+    
+}
+
+.result-container th {
+    background-color: #0056b3; /* Fondo azul para los encabezados */
+    color: white; /* Texto blanco */
+    font-weight: bold;
+}
+
+.result-container td {
+    color: black; /* Texto negro */
+}
+
+/* Ajuste de ancho adicional para pantallas grandes */
+@media screen and (min-width: 1024px) {
+    .result-container th, 
+    .result-container td {
+        padding: 15px 20px; /* Más espacio interno horizontal */
+    }
+}
+
+/* Contenedor para el administrador */
+.container-admin {
+    text-align: center;
+    background-color: #28A745; /* Fondo verde */
+    padding: 100px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Botones del administrador */
+.admin-button {
+    background-color: #FF0000; /* Botones rojos */
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.admin-button:hover {
+    background-color: #CC0000; /* Color más oscuro al pasar el cursor */
+}
+
+/* Barra de búsqueda */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-container input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el contenedor de resultados */
+.result-container {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones específicos para el administrador */
+.admin-button {
+    background-color: #FF5722; /* Botones de color rojo */
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.admin-button:hover {
+    background-color: #E64A19; /* Color más oscuro al pasar el cursor */
+}
+
+/* Estilos específicos para historialregistroadmin.html */
+.historial-container {
+    width: 100%; /* Usa todo el ancho de la pantalla */
+    margin: 0 auto; /* Centrado horizontal */
+    background-color: #3A6FB0; /* Fondo verde */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.historial-container h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Tabla ajustada */
+.historial-container table {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Elimina los espacios entre bordes */
+    margin: 20px 0;
+    table-layout: fixed; /* Ancho uniforme para las celdas */
+}
+
+.historial-container th,
+.historial-container td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 0.9em; /* Reduce ligeramente el tamaño de la letra */
+    word-wrap: break-word; /* Ajusta el contenido largo */
+}
+
+.historial-container th {
+    background-color: #0056b3; /* Encabezado azul */
+    color: white;
+    font-weight: bold;
+}
+
+.historial-container td {
+    color: black; /* Texto negro */
+}
+
+/* Ajustes en pantallas grandes */
+@media screen and (min-width: 1024px) {
+    .historial-container th,
+    .historial-container td {
+        padding: 15px;
+        font-size: 1em; /* Ajusta el tamaño de texto en pantallas grandes */
+    }
+}
+
+
+/* Estilos específicos para el formulario de agregar usuario en admin.html */
+.add-user-container {
+    margin-top: 20px;
+    background-color: #3A6FB0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.add-user-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.add-user-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.add-user-container input,
+.add-user-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.add-user-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.add-user-container button:hover {
+    background-color: #0056b3;
+}
+
+.result-container {
+    margin: 20px auto; /* Centrado horizontal */
+    padding: 10px; /* Menor espacio interno */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #000000;
+    width: 100%; /* Usar el ancho completo disponible */
+    max-width: 600px; /* Limitar ancho máximo */
+}
+
+.result-container table {
+    width: 100%; /* La tabla ocupa todo el ancho del contenedor */
+    border-collapse: collapse;
+    table-layout: fixed; /* Asegura que las celdas tengan un ancho uniforme */
+}
+
+.result-container th, 
+.result-container td {
+    padding: 8px; /* Reducir espacio interno */
+    border: 1px solid #ddd;
+    text-align: center; /* Centrar el texto */
+    font-size: 0.9em; /* Ajustar tamaño de fuente */
+    word-wrap: break-word; /* Ajusta textos largos */
+}
+
+.result-container th {
+    background-color: #007BFF; /* Fondo azul */
+    color: white; /* Texto blanco */
+    font-weight: bold;
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+.result-container tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fondo alternativo para filas pares */
+}
+
+.result-container button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.result-container button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
